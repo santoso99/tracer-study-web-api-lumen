@@ -47,33 +47,33 @@ http://localhost:8000/login
 ```
 
 2. Register
-Method : Post
-Parameter : Username, Email, Password
+<br>Method : Post
+<br>Parameter : Username, Email, Password
 ```
 http://localhost:8000/register
 ```
 
 3. Get User Data berdasarkan ID
-Method : Get
-Parameter : 
+<br>Method : Get
+<br>Parameter : 
 ```
 http://localhost:8000/user/{id}?api_token={api_token}
 ```
-{api_token} didapatkan dari proses login
 
 4. Insert Mahasiswa
-Method : Post
-Parameter : nim, nama, alamat, no_telepon
+<br>Method : Post
+<br>Parameter : nim, nama, alamat, no_telepon
 ```
 http://localhost:8000/mahasiswa
 ```
 
 5. Get Mahasiswa berdasarkan NIM
-Method : Get
-Parameter : 
+<br>Method : Get
+<br>Parameter : 
 ```
 http://localhost:8000/mahasiswa/{nim}?api_token={api_token}
 ```
+
 {api_token} didapatkan dari proses login
 
 
