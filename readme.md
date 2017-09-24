@@ -20,9 +20,60 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 
 The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
+
+
 # Dokumentasi dari Doelmi
 untuk menjalankan gunakan perintah berikut : 
 
 ```
 php -S localhost:8000 -t public
 ```
+
+## Database
+edit pengaturan database di file .env
+
+untuk migrasi database, jalankan perintah berikut:
+```
+php artisan migrate
+```
+
+
+## Routing
+1. Login 
+Method : Post
+Parameter : Email, Password
+```
+http://localhost:8000/login
+```
+
+2. Register
+Method : Post
+Parameter : Username, Email, Password
+```
+http://localhost:8000/register
+```
+
+3. Get User Data berdasarkan ID
+Method : Get
+Parameter : 
+```
+http://localhost:8000/user/{id}?api_token={api_token}
+```
+{api_token} didapatkan dari proses login
+
+4. Insert Mahasiswa
+Method : Post
+Parameter : nim, nama, alamat, no_telepon
+```
+http://localhost:8000/mahasiswa
+```
+
+5. Get Mahasiswa berdasarkan NIM
+Method : Get
+Parameter : 
+```
+http://localhost:8000/mahasiswa/{nim}?api_token={api_token}
+```
+{api_token} didapatkan dari proses login
+
+
