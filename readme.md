@@ -40,8 +40,8 @@ php artisan migrate
 
 ## Routing
 1. Login 
-Method : Post
-Parameter : Email, Password
+<br>Method : Post
+<br>Parameter : Email, Password
 ```
 http://localhost:8000/login
 ```
