@@ -8,7 +8,6 @@ use App\Mahasiswa;
 class MahasiswaController extends Controller {
 
     public function set_mhs(Request $request) {
-        $hasher = app()->make('hash');
         $nim = $request->input('nim');
         $nama = $request->input('nama');
         $alamat = $request->input('alamat');;
@@ -39,7 +38,22 @@ class MahasiswaController extends Controller {
             return response($res);
         } else {
             $res['success'] = false;
-            $res['message'] = 'Cannot find user!';
+            $res['message'] = 'Cannot find Mahasiswa!';
+
+            return response($res);
+        }
+    }
+
+    public function get_all_mhs(Request $request) {
+        $mhs = Mahasiswa::all();
+        if ($mhs) {
+            $res['success'] = true;
+            $res['message'] = $mhs;
+
+            return response($res);
+        } else {
+            $res['success'] = false;
+            $res['message'] = 'Cannot find Mahasiswa!';
 
             return response($res);
         }
