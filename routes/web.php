@@ -30,4 +30,4 @@ $router->get('/user/{id}', ['middleware' => 'auth', 'uses' => 'UserController@ge
 //Mahasiswa
 $router->post('/mahasiswa', ['middleware' => 'auth', 'uses' => 'MahasiswaController@set_mhs']);
 $router->get('/mahasiswa/{nim}', ['middleware' => 'auth', 'uses' => 'MahasiswaController@get_mhs']);
-$router->get('/mahasiswa', ['middleware' => 'auth','middleware' => 'cors', 'uses' => 'MahasiswaController@get_all_mhs']);
+$router->get('/mahasiswa', ['middleware' => 'auth', 'uses' => 'MahasiswaController@get_all_mhs']);
